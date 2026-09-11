@@ -128,7 +128,7 @@ async function search() {
   loader.classList.add("active");
   btn.disabled = true;
 
-  const wbUrl = `https://corsproxy.io/?url=${encodeURIComponent(`https://search.wb.ru/exactmatch/ru/common/v9/search?appType=1&curr=rub&dest=-1257786&query=${encodeURIComponent(q)}&resultset=catalog&sort=price_up&spp=30&suppressSpellcheck=false`)}`;
+  const wbUrl = `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(`https://search.wb.ru/exactmatch/ru/common/v9/search?appType=1&curr=rub&dest=-1257786&query=${encodeURIComponent(q)}&resultset=catalog&sort=price_up&spp=30&suppressSpellcheck=false`)}`;
 
   try {
     const res = await fetch(wbUrl);
